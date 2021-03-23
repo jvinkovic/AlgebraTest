@@ -1,15 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const djeljivo = 17;
+const djeljivo = 10;
 const korak = 2;
-const pocetnaVrijednost = 0;
 
 export default class Brojac extends React.Component{
     constructor(props){
         super(props);
-
+        
         this.state = {
-            broj: pocetnaVrijednost
+            broj: this.props.start
         };
     }
 
@@ -40,4 +40,13 @@ export default class Brojac extends React.Component{
             <button onClick={this.handlePlus}>+</button>
         </div>);
     }
+}
+
+Brojac.propTypes = {
+    start: PropTypes.number,
+    onDesetice: PropTypes.func
+}
+
+Brojac.defaultProps = {
+    start: 0
 }
