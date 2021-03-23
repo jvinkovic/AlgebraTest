@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div>
-      <Brojac start={23} onDesetice={handleDesetice}></Brojac>
+      <Brojac start={22} onDesetice={handleDesetice}></Brojac>
       <hr />
       <Brojac onDesetice={handleDesetice}></Brojac>
     </div>
