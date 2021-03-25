@@ -10,6 +10,40 @@ export default class Brojac extends React.Component{
         this.state = {
             broj: this.props.start
         };
+
+        console.log('constructor - Brojac');
+    }
+
+    componentDidMount() {
+        console.log('componentDidMount - Brojac - DOM prikazan');
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('shouldComponentUpdate - Brojac - DOM did refresh');
+        console.log('------props--------');
+        console.log(nextProps);
+        console.log(this.props);
+        console.log('-----state---------');
+        console.log(nextState);
+        console.log(this.state);
+        return true;
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('componentDidUpdate - Brojac - DOM did refresh');
+        console.log('------props--------');
+        console.log(prevProps);
+        console.log(this.props);
+        console.log('-----state---------');
+        console.log(prevState);
+        console.log(this.state);
+        console.log('-----snapshot---------');
+        console.log(snapshot);
+        console.log('--------------');
+    }
+
+    componentWillUnmount() {
+        console.log('bye - umirem');
     }
 
     callEvent = (br) => {
@@ -33,6 +67,8 @@ export default class Brojac extends React.Component{
     }
 
     render() {
+        console.log('render');
+
         return (<div>
             <button onClick={this.handleMinus}>-</button>
             {this.state.broj}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Brojac from './Brojac';
 
 export default function BoljiBrojac({step, begin}){
@@ -8,6 +8,8 @@ export default function BoljiBrojac({step, begin}){
         const newCount = count + 1;
         setCount(newCount);
     }
+
+    useEffect(() => console.log('useEffect'));
 
     return (<div>
             <p>Event okinut {count} puta</p>
