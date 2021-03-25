@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const djeljivo = 10;
-const korak = 2;
 
 export default class Brojac extends React.Component{
     constructor(props){
@@ -22,13 +21,13 @@ export default class Brojac extends React.Component{
     }
 
     handleMinus = () => {
-        const noviBroj = this.state.broj - korak;
+        const noviBroj = this.state.broj - this.props.korak;
         this.callEvent(noviBroj);
         this.setState({broj: noviBroj});
     }
 
     handlePlus = () => {
-        const noviBroj = this.state.broj + korak;
+        const noviBroj = this.state.broj + this.props.korak;
         this.callEvent(noviBroj);
         this.setState({broj: noviBroj});
     }
@@ -44,9 +43,11 @@ export default class Brojac extends React.Component{
 
 Brojac.propTypes = {
     start: PropTypes.number,
+    korak: PropTypes.number,
     onDesetice: PropTypes.func
 }
 
 Brojac.defaultProps = {
-    start: 0
+    start: 0,
+    korak: 1
 }

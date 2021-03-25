@@ -1,15 +1,36 @@
+import React from 'react';
 import Brojac from './Brojac';
+import './App.css';
+import BoljiBrojac from './BoljiBrojac';
 
 function App() {
-  const handleDesetice = () => {
-    console.log('neka desetica');
+  const [counts, setCounts] = React.useState([0,0,0]);
+
+  const handleDesetice = (index) => {
+    const newCounts = [...counts];
+    newCounts[index] = newCounts[index] + 1;
+    setCounts(newCounts);
   }
 
   return (
-    <div>
-      <Brojac start={22} onDesetice={handleDesetice}></Brojac>
+    <div className="center">
+      <BoljiBrojac step={5} begin={-985} />
       <hr />
-      <Brojac onDesetice={handleDesetice}></Brojac>
+      <BoljiBrojac step={15} />
+      <hr />
+      <p>Event okinut {counts[0]} puta</p>
+      <Brojac korak={10} start={-10} onDesetice={() => {
+                                                        console.log('Poziv start!');
+                                                        handleDesetice(0);
+                                                        console.log('Poziv gotov!');
+                                                      }
+                                              }></Brojac>
+      <hr />
+      <p>Event okinut {counts[1]} puta</p>
+      <Brojac onDesetice={() => handleDesetice(1)}></Brojac>
+      <hr />
+      <p>Event okinut {counts[2]} puta</p>
+      <Brojac korak={3} onDesetice={() => handleDesetice(2)}></Brojac>
     </div>
   );
 }
