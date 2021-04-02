@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Link, NavLink, Route, Switch } from 'react-router-dom';
+import About from './About';
+import Home from './Home';
+import User from './User';
+import NASAPictureOfTheDay from './NASAPictureOfTheDay';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <NavLink activeStyle={{backgroundColor: 'blue'}} to="/about">About page</NavLink><br/>
+        <NavLink exact activeStyle={{backgroundColor: 'yellow'}} to="/">Go to home</NavLink><br/>
+        <Link to="/about/user/99">User settings</Link><br />
+        <Link to="/nasa">NASA picture of the day</Link>
+
+        <Switch>
+          <Route path="/about/user/:userId">
+            <User />
+          </Route>
+
+          <Route path="/about">
+            <About />
+          </Route>
+
+          <Route path="/nasa">
+            <NASAPictureOfTheDay />
+          </Route>
+
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
   );
 }
-
-export default App;
