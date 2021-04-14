@@ -1,15 +1,15 @@
-
-
 {
-  "Post": {
-    "title": "string",
-    "views": "int",
-    "published": "boolean",
-    "createdAt": "date",
-    "comments": "Comment[]"
+  "User": {
+    "id": "int",
+    "avatar_url": "string",
+    "name": "string",
+    "location": "string",
+    "bio": "string",
+    "repos": "Repo[]",
+    "has_many": "Repo"
   },
-  "Comment": {
-    "body": "string",
-    "post": "Post"
+  "Repo": {
+    "id": "int",
+    "name": "string"
   }
 }
