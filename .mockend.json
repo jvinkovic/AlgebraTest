@@ -5,9 +5,9 @@
     "name": "string",
     "location": "string",
     "bio": "string",
-    "repos": "repo[]"
+    "repos": "Repo[]"
   },
-  "repo": {
+  "Repo": {
     "id": "int",
     "name": "string"
   }
