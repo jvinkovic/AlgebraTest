@@ -1,5 +1,5 @@
 {
-  "User": 
+  "User": [
     "facebook": {
       "login": "facebook",
       "id": 69631,   
@@ -18,4 +18,5 @@
       "bio": "nisam samo bio, nego i jesam",    
     "repo": [{"id":115054047.33333333,"name":"nekiuser_.github"},{"id":113253587.33333333,"name":"nekiuser_Ax"},{"id":15783289.333333334,"name":"nekiuser_between-meals"},{"id":10868682,"name":"nekiuser_bistro"},{"id":6336142.666666667,"name":"nekiuser_buck"},{"id":32173790.666666668,"name":"nekiuser_chef-cookbooks"},{"id":5548432.666666667,"name":"nekiuser_chef-utils"},{"id":11377020,"name":"nekiuser_chisel"},{"id":110588.66666666667,"name":"nekiuser_codemod"},{"id":21733967.333333332,"name":"nekiuser_componentkit"},{"id":42358166,"name":"nekiuser_create-react-app"},{"id":57906455.333333336,"name":"nekiuser_DelegatedRecoveryReferenceImplementation"},{"id":63274096.666666664,"name":"nekiuser_docusaurus"},{"id":34742614,"name":"nekiuser_draft-js"},{"id":55747526,"name":"nekiuser_duckling"},{"id":439560.6666666667,"name":"nekiuser_facebook-android-sdk"},{"id":111759361.33333333,"name":"nekiuser_facebook-business-sdk-codegen"},{"id":11383369.333333334,"name":"nekiuser_facebook-clang-plugins"},{"id":35993636.666666664,"name":"nekiuser_facebook-instant-articles-sdk-php"},{"id":492327.3333333333,"name":"nekiuser_facebook-ios-sdk"},{"id":31473493.333333332,"name":"nekiuser_facebook-java-business-sdk"},{"id":67858917.33333333,"name":"nekiuser_facebook-nodejs-business-sdk"},{"id":13918889.333333334,"name":"nekiuser_facebook-php-business-sdk"},{"id":15639318,"name":"nekiuser_facebook-python-business-sdk"},{"id":20859582,"name":"nekiuser_facebook-ruby-business-sdk"},{"id":27844011.333333332,"name":"nekiuser_facebook-sdk-for-unity"},{"id":136525764.66666666,"name":"nekiuser_facebook360_dep"},{"id":74392032,"name":"nekiuser_FAI-PEP"},{"id":15880948,"name":"nekiuser_fatal"},{"id":43364354.666666664,"name":"nekiuser_fb303"}]
     },
+]
 }
